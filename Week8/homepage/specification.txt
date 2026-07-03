@@ -1,0 +1,35 @@
+HTML Tags Used:
+1. <nav>
+2. <h1>
+3. <p>
+4. <button>
+5. <img>
+6. <ul>
+7. <li>
+8. <form>
+9. <input>
+10. <table>
+11. <tr>
+12. <th>
+13. <td>
+14. <footer>
+
+CSS Selectors Used:
+1. body (tag)
+2. h1 (tag)
+3. #message (id)
+4. #time (id)
+5. footer (tag)
+
+CSS Properties Used:
+1. background-color
+2. color
+3. text-align
+4. font-size
+5. font-weight
+
+JavaScript:
+Used to display welcome message and show live clock that updates every second.
+
+Bootstrap:
+Used navbar for navigation, btn classes for buttons, form-control for inputs, table class for table, dropdown for dropdown menu.

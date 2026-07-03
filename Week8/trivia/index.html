@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        
+        <script>
+            // TODO: Add code to check answers to questions
+            // multiple choice
+            document.addEventListener('DOMContentLoaded', () => {
+                const response = document.getElementById('response');
+                const buttons = document.querySelectorAll('input[name="q1"]');
+                buttons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        if (button.value === 'Paris') {
+                            response.textContent = 'Correct!';
+                            button.style.backgroundColor = "green";
+
+                        } else {
+                            response.textContent = 'Incorrect. Try again!';
+                            button.style.backgroundColor = "red";
+                        }
+                    });
+                });
+            });
+        
+
+            // free response
+            document.addEventListener('DOMContentLoaded', () => {
+                const submitButton = document.getElementById('submitFreeResponse');
+                submitButton.addEventListener('click', () => {
+                    const userAnswer = document.getElementById('freeResponse').value.trim().toLowerCase();
+                    const correctAnswer = 'jupiter';
+
+                    if (userAnswer === correctAnswer) {
+                        document.getElementById('freeResponseResult').textContent = 'Correct!';
+                        submitButton.style.backgroundColor = "green";
+                    } else {
+                        document.getElementById('freeResponseResult').textContent = 'Incorrect. Try again!';
+                        submitButton.style.backgroundColor = "red";
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                    <h3>Question: What is the capital of France?</h3>
+                    <input type="button" name="q1" value="Berlin">
+                    <input type="button" name="q1" value="Madrid">
+                    <input type="button" name="q1" value="Paris">
+                    <input type="button" name="q1" value="Rome"> 
+
+                    <p id="response"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                    <h3>Question: What is the largest planet in our solar system?</h3>
+                    <input type="text" id="freeResponse" name="freeResponse">
+                    <input type="button" id="submitFreeResponse" value="Submit">
+                    <p id="freeResponseResult"></p>                  
+            </div>
+        </div>
+    </body>
+</html>
